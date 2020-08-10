@@ -1,8 +1,12 @@
 defmodule Weather.NoaaClient do
+  @moduledoc false
+
   @behaviour Weather.Client
   import SweetXml
 
   defmodule Response do
+    @moduledoc false
+
     defstruct [
       :station_id,
       :location,

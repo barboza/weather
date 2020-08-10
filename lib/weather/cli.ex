@@ -36,9 +36,10 @@ defmodule Weather.CLI do
   end
 
   defp validate_location([location]) when is_binary(location) do
-    cond do
-      String.length(location) == 4 -> [location]
-      true -> :help
+    if String.length(location) == 4 do
+      [location]
+    else
+      :help
     end
   end
 

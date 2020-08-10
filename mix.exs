@@ -24,7 +24,8 @@ defmodule Weather.MixProject do
     [
       {:httpoison, "~> 1.7.0"},
       {:sweet_xml, "~> 0.6.6"},
-      {:mox, "~> 0.5.2"}
+      {:mox, "~> 0.5.2"},
+      {:credo, "~> 1.4", only: [:dev, :test], runtime: false}
     ]
   end
 
