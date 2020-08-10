@@ -1,21 +1,13 @@
 # Weather
 
-**TODO: Add description**
+A simple CLI to fetch weather information from https://w1.weather.gov/
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `weather` to your list of dependencies in `mix.exs`:
+Clone the repo
+`git clone git@github.com:barboza/weather`
 
-```elixir
-def deps do
-  [
-    {:weather, "~> 0.1.0"}
-  ]
-end
-```
+`cd weather`
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/weather](https://hexdocs.pm/weather).
+`mix deps.get`
 
