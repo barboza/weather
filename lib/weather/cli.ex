@@ -4,9 +4,12 @@ defmodule Weather.CLI do
   generate a weather report for a given location.
   """
 
+  @client Application.get_env(:weather, :client)
+
   def main(argv) do
     argv
     |> parse_args()
+    |> process()
   end
 
   @doc """
@@ -34,7 +37,7 @@ defmodule Weather.CLI do
 
   defp validate_location([location]) when is_binary(location) do
     cond do
-      String.length(location) == 3 -> [location]
+      String.length(location) == 4 -> [location]
       true -> :help
     end
   end
@@ -45,5 +48,9 @@ defmodule Weather.CLI do
     IO.puts("""
     usage: weather <location>
     """)
+  end
+
+  def process(%{location: location}) do
+    @client.fetch(location)
   end
 end
